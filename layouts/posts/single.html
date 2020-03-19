@@ -37,7 +37,7 @@
             </div>
         </article>
 
-        <hr />
+        <hr style="margin-top: 50px;"/>
 
         <div class="post-info">
             {{- with .Params.tags }}
@@ -65,7 +65,7 @@
                     <hr />
                 </div>
 
-                <div class="pagination__buttons">
+                <div class="pagination__buttons" style="margin-top: 50px;">
                     {{ if .NextInSection }}
                         <span class="button previous">
                             <a href="{{ .NextInSection.Permalink }}">
@@ -88,7 +88,7 @@
         {{ end }}
 
         {{- if .Site.DisqusShortname }}
-            <div id="comments" class="thin">
+            <div id="comments" class="thin" style="margin-top: 50px;">
                 {{ template "_internal/disqus.html" . }}
             </div>
         {{- end }}

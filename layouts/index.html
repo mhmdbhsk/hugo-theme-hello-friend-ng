@@ -1,17 +1,279 @@
 {{ define "main" }}
-    <main aria-role="main">
-        <div>
-            <h1>{{ .Site.Title }}</h1>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-            {{- with .Site.Params.homeSubtitle }}
+<main aria-role="main">
+    <div>
+        <!-- <h1>{{ .Site.Title }}</h1> -->
+        <!-- {{- with .Site.Params.homeSubtitle }}
                 <p>{{.}}</p>
-            {{- end }}
+            {{- end }} -->
 
-            {{- with .Site.Params.social }}
-                <div>
-                    {{ partial "social-icons.html" . }}
+        <style>
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 4px;
+                padding-top: 80px;
+                padding-bottom: 100px;
+            }
+
+            .column-img {
+                flex: 26%;
+                max-width: 26%;
+            }
+
+            .column-text {
+                flex: 65%;
+                max-width: 65%;
+            }
+
+            .about {
+                margin: 0;
+                padding: 5% 0;
+                background: #263238;
+            }
+
+            .achivement {
+                margin: 0;
+                padding: 45px 0 55px 0;
+                background: #212121;
+            }
+
+            .certificate {
+                margin: 0;
+                padding: 45px 0 55px 0;
+                background: #455A64;
+            }
+
+            .container-custom {
+                text-align: start;
+                margin: 0 350px 0 350px;
+            }
+
+            .h1-white {
+                color: #ffffff;
+                margin: 0;
+            }
+
+            .p-white {
+                color: #ffffff;
+                font-size: 0.9em;
+                font-weight: 100;
+            }
+
+            .li-white {
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+
+            .small-grey {
+                color: #CFD8DC;
+                font-size: 0.9em;
+            }
+
+
+            @media (max-width: 600px) {
+                .row {
+                    padding-top: 100px;
+                    padding-bottom: 100px;
+                }
+
+                .column-img {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+
+                .column-text {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+
+                .container-custom {
+                    flex: 100%;
+                    max-width: 100%;
+                    margin: 0 50px 0 50px;
+                }
+
+                .about {
+                    margin: 0;
+                    padding: 5% 0;
+                }
+
+                .achivement {
+                    margin: 0;
+                    margin: 0;
+                    padding: 5% 0;
+                    ;
+                }
+
+                .certificate {
+                    margin: 0;
+                    margin: 0;
+                    padding: 5% 0;
+                }
+            }
+        </style>
+
+        <div class="container-custom ">
+            <div style="display: flex; align-items: center;" class="row">
+
+                <div style="margin-right: 50px; justify-content: center;" class="column-img"><img src="avatar.png"
+                        alt="Muhammad Bhaska"
+                        style="width: 150px; border-radius: 100px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+                        ;></div>
+                <div style="text-align: start;" class="column-text">
+                    <h1 style="margin-bottom: 0px;">Azra Muhammad</h1>
+                    <h1 style="margin-top: 0px;">Bhaskarogra</h1>
+                    <div>
+                        {{- with .Site.Params.social }}
+                        <div>
+                            {{ partial "social-icons.html" . }}
+                        </div>
+                        {{- end }}
+                    </div>
                 </div>
-            {{- end }}
+            </div>
         </div>
-    </main>
+
+        <div class="about">
+            <div class="container-custom ">
+                <h1 class="h1-white" style="margin-bottom: 5%;">About me</h1>
+                <p class="p-white">Hi There! My name is Azra Muhammad Bhaskarogra. </p>
+                <p class="p-white">I'm a beginner developer and network engineer.
+                    At this time I am still going to school at SMKN 7 Semarang. My hobbies are configure and costumize network topology and devices, coding,
+                    "oprek" android, graphic design, video editing, and others.</p>
+            </div>
+        </div>
+
+        <div class="achivement">
+            <div class="container-custom ">
+                <h1 class="h1-white" style="margin-bottom: 5%;">Achievement</h1>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>LKS Cyber Security 2020 Central Java Province - 1st
+                        place</li>
+                    <small class="small-grey">2020</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>Techomfest 2020 Network Competition - Finalist & 4th
+                        place</li>
+                    <small class="small-grey">2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>Dinusfest 2020 IT Competition - Finalist
+                        place</li>
+                    <small class="small-grey">2020</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>Elination#2 2019 Network Competition - 2nd
+                        place</li>
+                    <small class="small-grey">2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>LKS IT Network Support 2019 Semarang - 2nd
+                        place</li>
+                    <small class="small-grey">2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>Techomfest 2019 Network Competition - 1st
+                        place</li>
+                    <small class="small-grey">2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>Dinusfest 2019 IT Competition - 2nd place
+                    </li>
+                    <small class="small-grey">2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>SEAMOLEC SEAMEO Creative Camp Augmented
+                        Reality
+                        STEM 2018 Phase 2 - Contributor</li>
+                    <small class="small-grey">2018</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>Karate POPDA - 55kg Men Kumite - 4th place
+                    </li>
+                    <small class="small-grey">2016</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>Olympics and Competency Competitions
+                        Al-Azhar
+                        Indonesia - TIK</li>
+                    <small class="small-grey">2015</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-trophy"></i>LPK Primadipa 2013 Paint - 1st place</li>
+                    <small class="small-grey">2013</small>
+                </div><br>
+            </div>
+        </div>
+
+        <div class="certificate">
+            <div class="container-custom ">
+                <h1 class="h1-white" style="margin-bottom: 5%;">Certificate</h1>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>Cisco Netacad - Network Essentials</li>
+                    <small class="small-grey">February 2020</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>Certificate of Participant - Google Code-In 2019</li>
+                    <small class="small-grey">January 2020</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>Baseline: Infrastructure - Qwiklabs
+                    </li>
+                    <small class="small-grey">December 2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>GCP Essentials - Qwiklabs
+                    </li>
+                    <small class="small-grey">December 2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>Kubernetes in the Google Cloud - Qwiklabs
+                    </li>
+                    <small class="small-grey">December 2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>Belajar Dasar-Dasar Azure Cloud - Dicoding
+                    </li>
+                    <small class="small-grey">Oktober 2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>Belajar Membuat Aplikasi Android untuk Pemula - Dicoding
+                    </li>
+                    <small class="small-grey">Oktober 2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>MikroTik Certified Routing Engineer ( MTCRE )
+                    </li>
+                    <small class="small-grey">July 2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>Mikrotik Certified Network Associate ( MTCNA
+                        )
+                    </li>
+                    <small class="small-grey">March 2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>Certificate of Participant - Google Code-In 2018</li>
+                    <small class="small-grey">January 2019</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>SEAMOLEC SEAMEO Creative Camp Augmented
+                        Reality
+                        STEM 2018 Phase 2</li>
+                    <small class="small-grey">2018</small>
+                </div><br>
+                <div class="fa-ul">
+                    <li class="li-white"><i class="fa-li fas fa-award"></i>Cisco Netacad - IT Essentials</li>
+                    <small class="small-grey">2018</small>
+                </div><br>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</main>
 {{ end }}
